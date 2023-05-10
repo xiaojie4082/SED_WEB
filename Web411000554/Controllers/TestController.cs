@@ -14,7 +14,7 @@ namespace Web411000554.Controllers
             return View();
         }
 
-        public ActionResult HW1()
+        public ActionResult Razor()
         {
             return View();
         }

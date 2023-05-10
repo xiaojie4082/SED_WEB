@@ -5,3 +5,41 @@
 
 <h2>Razor</h2>
 
+<p># 1 Message & Time</p>
+@{
+    var message = "現在時間是：";
+}
+<p>@message @DateTime.Now</p>
+
+<p># 2 if...else...</p>
+@{
+    var suc = false;
+}
+
+@if (suc == true)
+{
+    <p>成功</p>
+}
+else
+{
+    <p>失敗</p>
+}
+
+<p># 3 for 1 ~ 10</p>
+<p>
+    @for (int i = 1; i <= 10; i++)
+    {
+        @i<br>
+    }
+<p>
+
+<p># HW3</p>
+@{
+    string[] fruits = { "蘋果", "香蕉", "荔枝", "鳳梨", "西瓜" };
+}
+<ol>
+    @foreach (string item in fruits)
+    {
+        <li>@item</li>
+    }
+</ol>

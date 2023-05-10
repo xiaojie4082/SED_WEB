@@ -5,26 +5,29 @@
 
 <h2>Index</h2>
 
-<form action="/" method="post">
-    <p>Name: <input type="text" name="name" value="" /></p><br />
-    <p>Username: <input type="text" name="username" value="" /></p><br />
-    <p>Password: <input type="password" name="password" value="" /></p><br />
-    <p>
-        Gender:
-        <input type="radio" name="gender" value="Male"> Male
-        <input type="radio" name="gender" value="Female"> Female<br>
-    </p>
-    <p>
-        Interest:
-        <input type="checkbox" name="swim" value="swim"> swim
-        <input type="checkbox" name="read" value="read"> read
-        <input type="checkbox" name="See a movie" value="rSee a movie"> See a movie<br>
-    </p>
-    <p>
-        Self introduction:
-        <textarea name="Self_introduction"></textarea>
+@using (Html.BeginForm("Ation", "Controller", FormMethod.Post))
+{
+    <div>
+        <p>Name: @Html.TextBox("name")</p><br />
+        <p>Username: @Html.TextBox("username")</p><br />
+        <p>Password: @Html.Password("password")</p><br />
+        <p>
+            Gender:
+            @Html.RadioButton("gender", "Male") Male
+            @Html.RadioButton("gender", "Femal") Female<br>
+        </p>
+        <p>
+            Interest:
+            @Html.CheckBox("swim", "swim") swim
+            @Html.CheckBox("read", "read") read
+            @Html.CheckBox("movie", "movie") See a movie<br>
+        </p>
+        <p>
+            Self introduction:
+            @Html.TextArea("Self_introduction")
 
-    </p>
+        </p>
 
-    <input type="submit" name="submit" value="送出" /> <input type="reset" name="重置" value="重置" />
-</form>
+        <input type="submit" name="submit" value="送出" /> <input type="reset" name="重置" value="重置" />
+    </div>
+}

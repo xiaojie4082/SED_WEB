@@ -13,10 +13,10 @@ namespace Web411000554.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db411000554Entities : DbContext
+    public partial class db411000554Entities1 : DbContext
     {
-        public db411000554Entities()
-            : base("name=db411000554Entities")
+        public db411000554Entities1()
+            : base("name=db411000554Entities1")
         {
         }
     

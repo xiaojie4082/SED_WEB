@@ -15,10 +15,10 @@ namespace Web411000554.Models
     {
         public int Id { get; set;}
 
-        [Required(ErrorMessage = "請輸入姓名")]
-        [Display(Name = "姓名")]
+        [Required(ErrorMessage = "請輸入使用者名稱")]
+        [Display(Name = "Username")]
         [StringLength(5,MinimumLength = 2, ErrorMessage = "請輸入2~5個字元")]
-        public string Name { get; set;}
+        public string Username { get; set;}
 
         [Required(ErrorMessage = "請輸入學號")]
         [Display(Name = "學號")]
